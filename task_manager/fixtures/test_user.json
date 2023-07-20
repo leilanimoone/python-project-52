@@ -1,0 +1,24 @@
+{
+    "create_success": {
+        "pk": 4,
+        "username": "PRay",
+        "first_name": "Pete",
+        "last_name": "Ray",
+        "password1": "123456789",
+        "password2": "123456789"
+    },
+    "existing": {
+        "pk": 3,
+        "username": "JBlack",
+        "first_name": "June",
+        "last_name": "Black",
+        "password": "123456789"
+    },
+    "new": {
+        "pk": 3,
+        "username": "JBlack",
+        "first_name": "June",
+        "last_name": "White",
+        "password": "123456789"
+    }
+}
