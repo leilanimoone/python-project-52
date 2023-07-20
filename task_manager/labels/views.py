@@ -9,6 +9,7 @@ from task_manager.mixins import LabelsMixin
 
 class LabelsListView(LabelsMixin, ListView):
     context_object_name = 'labels'
+    template_name = 'labels/labels.html'
 
 
 class LabelCreateView(LabelsMixin, CreateView):

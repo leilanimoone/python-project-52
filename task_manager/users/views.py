@@ -10,6 +10,7 @@ from .models import User
 class UsersView(ListView):
     model = User
     context_object_name = 'users'
+    template_name = 'users/user.html'
     extra_context = {'title': _('Users')}
 
 
@@ -24,11 +25,13 @@ class UserCreateView(SuccessMessageMixin, CreateView):
 class UserUpdateView(CheckMixin, SuccessMessageMixin, UpdateView):
     model = User
     form_class = UserForm
+    template_name = 'users/update_user.html'
     success_url = reverse_lazy('home_users')
     success_message = _('User successfully changed')
 
 
 class UserDeleteView(CheckMixin, SuccessMessageMixin, DeleteView):
     model = User
+    template_name = 'users/delete_user.html'
     success_url = reverse_lazy('home_users')
     success_message = _('User successfully deleted')

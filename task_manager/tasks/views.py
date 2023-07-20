@@ -11,7 +11,7 @@ from task_manager.mixins import TasksMixin
 class TasksListView(TasksMixin, FilterView):
     context_object_name = 'tasks'
     extra_context = {'title': _('Tasks')}
-    template_name = 'tasks/tasks_list.html'
+    template_name = 'tasks/tasks.html'
     filterset_class = TaskFilter
 
 
@@ -26,6 +26,7 @@ class TaskCreateView(TasksMixin, CreateView):
 
 class TaskDetailView(TasksMixin, DetailView):
     context_object_name = 'task'
+    template_name = 'tasks/tasks_show.html'
     extra_context = {'title': _('Show task')}
 
 

@@ -9,6 +9,7 @@ from task_manager.mixins import StatusMixin
 
 class StatusesListView(StatusMixin, ListView):
     context_object_name = 'statuses'
+    template_name = 'statuses/statuses.html'
 
 
 class StatusCreateView(StatusMixin, CreateView):
