@@ -3,14 +3,9 @@ MANAGE := poetry run python manage.py
 install: .env
 	@poetry install
 
-make-migration:
-	@$(MANAGE) makemigrations
-
-migrate: make-migration
-	@$(MANAGE) migrate
-
 build: 
-	install migrate
+	poetry run python manage.py makemigrations
+	poetry run python manage.py migrate
 
 dev:
 	poetry run python manage.py runserver
