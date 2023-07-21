@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 13:13+0300\n"
+"POT-Creation-Date: 2023-07-21 13:59+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,8 @@ msgstr "Метка"
 msgid "=Labels="
 msgstr "Метки"
 
-#: task_manager/labels/views.py:13 task_manager/templates/navigation.html:10
+#: task_manager/labels/views.py:13 task_manager/tasks/models.py:31
+#: task_manager/templates/navigation.html:10
 #: task_manager/templates/tasks/tasks_show.html:35
 msgid "Labels"
 msgstr "Метки"
@@ -182,10 +183,6 @@ msgstr "Автор"
 msgid "Executor"
 msgstr "Исполнитель"
 
-#: task_manager/tasks/models.py:31
-msgid "Label"
-msgstr "Метка"
-
 #: task_manager/tasks/models.py:39
 msgid "=Task="
 msgstr "Задача"
@@ -260,7 +257,7 @@ msgstr "Имя"
 #: task_manager/templates/labels/labels.html:25
 #: task_manager/templates/statuses/statuses.html:26
 #: task_manager/templates/tasks/tasks.html:43
-#: task_manager/templates/tasks/tasks_show.html:49
+#: task_manager/templates/tasks/tasks_show.html:46
 #: task_manager/templates/users/user.html:27
 msgid "Edit"
 msgstr "Изменить"
@@ -268,7 +265,7 @@ msgstr "Изменить"
 #: task_manager/templates/labels/labels.html:26
 #: task_manager/templates/statuses/statuses.html:27
 #: task_manager/templates/tasks/tasks.html:44
-#: task_manager/templates/tasks/tasks_show.html:50
+#: task_manager/templates/tasks/tasks_show.html:47
 #: task_manager/templates/users/user.html:28
 msgid "Delete"
 msgstr "Удалить"
@@ -309,10 +306,6 @@ msgstr "Создать статус"
 #: task_manager/templates/tasks/tasks.html:7
 msgid "Add task"
 msgstr "Создать задачу"
-
-#: task_manager/templates/tasks/tasks_show.html:42
-msgid "Task without any label"
-msgstr "Задача без меток"
 
 #: task_manager/templates/users/create_user.html:11
 msgid "Register"
@@ -365,6 +358,3 @@ msgstr "Вы залогинены"
 #: task_manager/views.py:16
 msgid "Successfully logout"
 msgstr "Вы разлогинены"
-
-#~ msgid "New Tasks"
-#~ msgstr "Задачи"
