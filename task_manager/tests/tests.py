@@ -104,10 +104,8 @@ class TestIndex(TestCase):
 class TestLogin(TestCase):
 
     def create_custom_user(self):
-        self.data_user = {
-                    'username': 'test',
-                    'password': '123456789'
-                }
+        self.data_user = {'username': 'test',
+                          'password': '123456789'}
         self.user = User.objects.create_user(**self.data_user)
 
     def test_login(self):
@@ -126,5 +124,3 @@ class TestLogin(TestCase):
         response = self.client.post(reverse('logout'), follow=True)
         self.assertEqual(response.status_code, 200)
         self.assertFalse(response.context['user'].is_authenticated)
-
-
