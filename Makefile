@@ -4,8 +4,8 @@ install: .env
 	@poetry install
 
 build: 
-	poetry run python manage.py makemigrations
-	poetry run python manage.py migrate
+	poetry run python3 manage.py makemigrations
+	poetry run python3 manage.py migrate
 
 dev:
 	poetry run python manage.py runserver
