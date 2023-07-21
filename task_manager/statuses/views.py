@@ -10,21 +10,24 @@ from task_manager.mixins import StatusMixin
 class StatusesListView(StatusMixin, ListView):
     context_object_name = 'statuses'
     template_name = 'statuses/statuses.html'
+    extra_context = {'title': _('Statuses')}
 
 
 class StatusCreateView(StatusMixin, CreateView):
     success_message = _("Status created successfully")
     template_name = 'form.html'
+    extra_context = {'title': _('Create status'), 'button': _('Create')}
 
 
 class StatusUpdateView(StatusMixin, UpdateView):
     success_message = _('Status successfully changed')
     template_name = 'form.html'
-    extra_context = {'title': _('Statuses'), 'button': _('Change')}
+    extra_context = {'title': _('Change status'), 'button': _('Change')}
 
 
 class StatusDeleteView(StatusMixin, DeleteView):
     template_name = 'delete_form.html'
+    extra_context = {'title': _('Delete status'), 'button': _('Yes, delete')}
 
     def post(self, request, *args, **kwargs):
         try:

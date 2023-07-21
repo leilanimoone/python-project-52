@@ -10,7 +10,7 @@ from .labels.models import Labels
 
 
 class CheckMixin:
-    def has_permission(self) -> bool:
+    def has_permission(self):
         return self.get_object().pk == self.request.user.pk
 
     def dispatch(self, request, *args, **kwargs):
@@ -31,7 +31,6 @@ class CheckMixin:
 
 class StatusMixin(LoginRequiredMixin, SuccessMessageMixin):
     model = Statuses
-    extra_context = {'title': _('Statuses'), 'button': _('Create')}
     login_url = reverse_lazy('login')
     success_url = reverse_lazy('home_statuses')
     fields = ['name']
@@ -39,7 +38,6 @@ class StatusMixin(LoginRequiredMixin, SuccessMessageMixin):
 
 class TasksMixin(LoginRequiredMixin, SuccessMessageMixin):
     model = Tasks
-    extra_context = {'title': _('New Tasks'), 'button': _('Create')}
     login_url = reverse_lazy('login')
     success_url = reverse_lazy('home_tasks')
     fields = ['name', 'description', 'status', 'executor', 'labels']
@@ -47,7 +45,6 @@ class TasksMixin(LoginRequiredMixin, SuccessMessageMixin):
 
 class LabelsMixin(LoginRequiredMixin, SuccessMessageMixin):
     model = Labels
-    extra_context = {'title': _('Labels'), 'button': _('Create')}
     login_url = reverse_lazy('login')
     success_url = reverse_lazy('home_labels')
     fields = ['name']

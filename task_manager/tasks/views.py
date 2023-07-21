@@ -10,14 +10,15 @@ from task_manager.mixins import TasksMixin
 
 class TasksListView(TasksMixin, FilterView):
     context_object_name = 'tasks'
-    extra_context = {'title': _('Tasks')}
     template_name = 'tasks/tasks.html'
     filterset_class = TaskFilter
+    extra_context = {'title': _('Tasks'), 'button': _('Show')}
 
 
 class TaskCreateView(TasksMixin, CreateView):
     template_name = 'form.html'
     success_message = _("Task created successfully")
+    extra_context = {'title': _('Create task'), 'button': _('Create')}
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -39,6 +40,7 @@ class TaskUpdateView(TasksMixin, UpdateView):
 class TaskDeleteView(TasksMixin, DeleteView):
     template_name = 'delete_form.html'
     success_message = _('Task successfully deleted')
+    extra_context = {'title': _('Delete task'), 'button': _('Yes, delete')}
 
     def has_permission(self) -> bool:
         return self.get_object().author.pk == self.request.user.pk

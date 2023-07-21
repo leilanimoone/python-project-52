@@ -6,4 +6,4 @@
 
 This simple web task manager with user, task, label and status models writen on Django. It uses bootsrap and any available DB for Django.
 
-- demonstration page.
+https://task-manager-lt5g.onrender.com - demonstration page.
