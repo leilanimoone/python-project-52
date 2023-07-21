@@ -1,25 +1,23 @@
-install:
-	poetry install
+MANAGE := poetry run python manage.py
+
+install: .env
+	@poetry install
+
+make-migration:
+	@$(MANAGE) makemigrations
+
+migrate: make-migration
+	@$(MANAGE) migrate
+
+build: 
+	install migrate
 
 dev:
 	poetry run python manage.py runserver
 
 PORT ?= 8000
 start:
-	python3 manage.py migrate
 	poetry run gunicorn -w 5 -b 0.0.0.0:$(PORT) task_manager.wsgi
-
-shell:
-	python3 manage.py shell
-
-makemig:
-	poetry run python3 manage.py makemigrations
-
-mig:
-	poetry run python3 manage.py migrate
-
-parsetrans:
-	django-admin makemessages --ignore="static" --ignore=".env"  -l ru
 
 trans:
 	django-admin compilemessages
@@ -29,9 +27,3 @@ lint:
 
 tests:
 	poetry run python3 manage.py test
-
-setup:
-	poetry install
-	poetry run python3 manage.py makemigrations
-	poetry run python3 manage.py migrate
-	poetry run gunicorn --bind 0.0.0.0:$(PORT) task_manager.wsgi
