@@ -200,7 +200,7 @@ msgstr "Вы не авторизованы! Пожалуйста, выполни
 
 #: task_manager/tasks/views.py:57
 msgid "Error! You can't delete this task. Only author"
-msgstr "Задачу может удалить только её автор"
+msgstr "Задачу может удалить только ее автор"
 
 #: task_manager/templates/delete_form.html:10
 #: task_manager/templates/users/delete_user.html:10
@@ -329,7 +329,7 @@ msgstr "Пользователь успешно изменен"
 
 #: task_manager/users/views.py:37
 msgid "User successfully deleted"
-msgstr "Пользователь успешно удалён"
+msgstr "Пользователь успешно удален"
 
 #: task_manager/views.py:9
 msgid "Successfully login"
