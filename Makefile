@@ -12,7 +12,7 @@ dev:
 
 PORT ?= 8000
 start:
-	poetry run gunicorn -w 5 -b 0.0.0.0:$(PORT) task_manager.wsgi
+	gunicorn task_manager.wsgi
 
 trans:
 	django-admin compilemessages
