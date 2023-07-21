@@ -321,7 +321,7 @@ msgstr "Создать пользователя"
 
 #: task_manager/users/views.py:22
 msgid "User created successfully"
-msgstr "Пользователь успешно создан"
+msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/users/views.py:30
 msgid "User successfully changed"
