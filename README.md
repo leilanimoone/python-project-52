@@ -21,6 +21,6 @@ ROLLBAR_TOKEN =
 <pre>
 $ git clone https://github.com/leilanimoone/python-project-52.git
 $ cd python-project-52
-$ make setup
+$ make start
 # The site will be available at http://127.0.0.1:8000/ and http://0.0.0.0:8000/
 </pre>
