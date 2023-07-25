@@ -2,7 +2,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from django.utils.translation import gettext_lazy as _
 from django.contrib.messages.views import SuccessMessageMixin
-from task_manager.mixins import CheckMixin
+from task_manager.mixins import CheckMixin, DeleteProtectionMixin
 from .forms import UserForm
 from .models import User
 
@@ -30,7 +30,10 @@ class UserUpdateView(CheckMixin, SuccessMessageMixin, UpdateView):
     success_message = _('User successfully changed')
 
 
-class UserDeleteView(CheckMixin, SuccessMessageMixin, DeleteView):
+class UserDeleteView(CheckMixin,
+                     SuccessMessageMixin,
+                     DeleteView,
+                     DeleteProtectionMixin):
     model = User
     template_name = 'users/delete_user.html'
     success_url = reverse_lazy('home_users')
