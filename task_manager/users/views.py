@@ -35,3 +35,5 @@ class UserDeleteView(CheckMixin, SuccessMessageMixin, DeleteView):
     template_name = 'users/delete_user.html'
     success_url = reverse_lazy('home_users')
     success_message = _('User successfully deleted')
+    protected_message = _('Unable to delete a user because he is being used')
+    protected_url = reverse_lazy('home_users')

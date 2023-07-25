@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 13:59+0300\n"
+"POT-Creation-Date: 2023-07-25 23:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,11 +100,11 @@ msgstr "Вы не авторизованы!"
 msgid "You have't permission!"
 msgstr "У вас нет разрешения!"
 
-#: task_manager/settings.py:135
+#: task_manager/settings.py:123
 msgid "English"
 msgstr "Английский"
 
-#: task_manager/settings.py:136
+#: task_manager/settings.py:124
 msgid "Russian"
 msgstr "Русский"
 
@@ -350,6 +350,10 @@ msgstr "Пользователь успешно изменен"
 #: task_manager/users/views.py:37
 msgid "User successfully deleted"
 msgstr "Пользователь успешно удален"
+
+#: task_manager/users/views.py:38
+msgid "Unable to delete a user because he is being used"
+msgstr "Невозможно удалить пользователя, потому что он используется"
 
 #: task_manager/views.py:9
 msgid "Successfully login"
